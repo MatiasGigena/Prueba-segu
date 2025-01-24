@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "username": "Eduarto@hotmail.es",
+    "password": "contra123",
+    "role": "user"
+  },
+  {
+    "id": "2",
+    "username": "Carlos@gmail.com",
+    "password": "contra123",
+    "role": "admin"
+  },
+  {
+    "id": "3",
+    "username": "Esteban@yahoo.com",
+    "password": "contra123",
+    "role": "user"
+  },
+  {
+    "id": "4",
+    "username": "Tomas@mercadolibre.es",
+    "password": "contra123",
+    "role": "user"
+  },
+  {
+    "id": "5",
+    "username": "Enrique@yopmail.com",
+    "password": "contra123",
+    "role": "user"
+  },
+  {
+    "id": "6",
+    "username": "Matias@gmail.com",
+    "password": "contra123",
+    "role": "user"
+  },
+  {
+    "id": "7",
+    "username": "Roberto@outlook.es",
+    "password": "contra123",
+    "role": "user"
+  }
+]

@@ -1,0 +1,126 @@
+$primary-color: #0dc8e0;
+$secondary-color: #393938;
+$text-color: white;
+$border-radius-full: 9999px;
+$desktop-breakpoint: 1024px;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin padding {
+  padding: 0 2.5rem;
+}
+
+.main {
+  @include flex-center;
+  flex-direction: column;
+  height: 409px;
+
+  .section {
+    width: 100%;
+    @include padding;
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      .topRow {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        justify-content: space-between;
+
+        .brand {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+
+          .logo {
+            height: 1.75rem;
+            width: auto;
+          }
+
+          .highlightText {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+
+          .socialLinks {
+            @include flex-center;
+            gap: 0.5rem;
+
+            .socialLink {
+              background-color: $secondary-color;
+              height: 2rem;
+              width: 2rem;
+              @include flex-center;
+              border-radius: $border-radius-full;
+            }
+          }
+        }
+
+        .contact {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          .contactHeader {
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 1.25rem;
+          }
+
+          .contactText {
+            color: $text-color;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .footerNote {
+        .divider {
+          width: 100%;
+          height: 1px;
+          background-color: $secondary-color;
+          margin-bottom: 0.2rem;
+        }
+
+        span {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  /* Media Queries */
+  @media (min-width: $desktop-breakpoint) {
+    .section {
+      width: 70%;
+    }
+
+    .article {
+      gap: 5rem;
+
+      .topRow {
+        flex-direction: row;
+        align-items: center;
+
+        .brand {
+          gap: 1.5rem;
+        }
+
+        .contact {
+          gap: 0.75rem;
+        }
+      }
+    }
+  }
+}
+

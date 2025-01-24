@@ -1,0 +1,138 @@
+$primary-color: #0DC8E0; // teal
+$dark-bg: rgb(19, 20, 18);
+$border-color: rgb(31, 37, 14);
+$error-color: red;
+$white: #ffffff;
+$rounded-full: 9999px;
+$font-bold: 700;
+$font-medium: 600;
+$gap-base: 8px;
+$padding-base: 16px;
+$input-height: 20px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column($gap: $gap-base) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// Styles
+.mainLogin {
+  height: 50vh;
+  width: 100%;
+  @include flex-center;
+  padding: 80px 0;
+}
+
+.secLogin {
+  @include flex-column;
+  @include flex-center;
+}
+
+.alert {
+  @include flex-center;
+  gap: $gap-base;
+  padding: $padding-base;
+  border: 1px solid $border-color;
+  color: $primary-color;
+  background-color: $dark-bg;
+  font-weight: $font-bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  border-radius: $rounded-full;
+  margin-bottom: 30px;
+
+  &Error {
+    background-color: $error-color;
+    border-color: $error-color;
+    color: $white;
+  }
+
+  .icon {
+    stroke: $primary-color;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.asterix {
+  background-color: #0F2426;
+  @include flex-center;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.125rem;
+}
+
+.programCard {
+  @include flex-center;
+  gap: $gap-base;
+  padding: 6px 15px;
+  border: 1px solid $border-color;
+  color: $primary-color;
+  background-color: $dark-bg;
+  border-radius: $rounded-full;
+}
+
+.programText {
+  text-align: center;
+  font-weight: $font-medium;
+  font-size: 14px;
+}
+
+.heading {
+  font-size: 20px;
+  text-align: center;
+  color: $white;
+  font-weight: $font-bold;
+  line-height: 1.2em;
+
+  @media (min-width: 1024px) {
+    font-size: 60px;
+  }
+}
+
+.formWrapper {
+  @include flex-column(12px);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.form {
+  @include flex-column(32px);
+  text-align: center;
+  @include flex-center;
+}
+
+.inputWrapper {
+  @include flex-column(12px);
+  width: 100%;
+  color: $white;
+
+  .input {
+    border-radius: $rounded-full;
+    padding: $input-height;
+    border: 1px solid $border-color;
+    background-color: $dark-bg;
+    color: $white;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.button {
+  background-color: $primary-color;
+  color: $white;
+  padding: $padding-base 24px;
+  border-radius: $rounded-full;
+  font-weight: $font-bold;
+  cursor: pointer;
+}
+
+
+
